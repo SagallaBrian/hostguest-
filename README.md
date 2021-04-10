@@ -6,7 +6,7 @@ run: node app
 
 cd hostguest -> client 
 
-run : npm install 
+run : npm install .\
 run : npm start 
 
 
