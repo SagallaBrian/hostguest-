@@ -1,4 +1,4 @@
-import {Link} from "react-router-dom";
+import { Link } from "react-router-dom";
 
 const { Component } = require("react");
 
@@ -18,7 +18,15 @@ class Productclas extends Component {
     }
 
     myhandledatafun(paramsdata) {
-        let imageurl = "https://www.api.komplab.com/images/img1.jpeg";
+
+        function rndnum() {
+            let mynum = Math.ceil(Math.random() * 1000);
+            let mynumstr = String(mynum);
+            let myimgurls = `https://picsum.photos/id/${mynumstr}/500/500`;
+            return myimgurls ;
+        }
+        rndnum();
+
         function mysecfu(params) {
             // console.log(params)
             let myregex1 = /- Any Brand/gi
@@ -33,7 +41,7 @@ class Productclas extends Component {
             return (
                 <div key={arrelem._id} className="col-md-4 mb-3">
                     <div className="card p-2 text-secondary">
-                        <img src={arrelem.imageurl} alt={arrelem._id} className="img-fluid" />
+                        <img src={rndnum()} alt={arrelem._id} className="img-fluid" />
                         <h5 className="pt-2" >Name:
                             <span className="text-success"> {mysecfu(arrelem.name)}</span>
                         </h5>
@@ -100,7 +108,7 @@ class Productclas extends Component {
 
         return (
             <div className="container-lg pb-5">
-                
+
                 <div className="row mb-3">
                     <div className="col-md-6">
                         {this.state.arrpos ?

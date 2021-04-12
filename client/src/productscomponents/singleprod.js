@@ -52,13 +52,14 @@ class Myhandledatafun extends Component {
     }
     render(){
         let mypro = this.state.statdata.name ;
+        let myimgurls = "https://picsum.photos/400";
         
 
         return(
             <div className="container-lg">
                 <div className="row">
                     <div className="col-md-6">
-                        <img src={this.state.statdata.imageurl} alt="my" className="img-fluid"/>
+                        <img src={myimgurls} alt="my" className="img-fluid"/>
                     </div>
                     <div className="col-md-6 text-secondary">
                         <div className="py-5">
